@@ -334,6 +334,22 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A01-GN-rT2" id="izA-H5-wf1">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kP-Tk-NfG">
+                                                    <rect key="frame" x="20" y="7.0000000000000018" width="355" height="29.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <state key="normal" title="radioasp"/>
+                                                    <connections>
+                                                        <action selector="goToSkype" destination="KfR-zb-Wdd" eventType="touchUpInside" id="e4a-Oy-EaK"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="0kP-Tk-NfG" secondAttribute="bottom" constant="7" id="85K-qC-iQq"/>
+                                                <constraint firstItem="0kP-Tk-NfG" firstAttribute="top" secondItem="izA-H5-wf1" secondAttribute="top" constant="7" id="9tJ-Qm-XCr"/>
+                                                <constraint firstAttribute="trailing" secondItem="0kP-Tk-NfG" secondAttribute="trailing" id="Nj9-oD-A1V"/>
+                                                <constraint firstItem="0kP-Tk-NfG" firstAttribute="leading" secondItem="izA-H5-wf1" secondAttribute="leading" constant="20" id="rGj-rB-Tjb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>

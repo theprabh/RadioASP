@@ -15,8 +15,7 @@ class ContactTableViewController: UITableViewController {
     @IBOutlet weak var usa: UITextView!
     @IBOutlet weak var canada: UITextView!
     @IBOutlet weak var whatsapp: UITextView!
-    //@IBOutlet weak var skype: UITextView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +32,20 @@ class ContactTableViewController: UITableViewController {
         usa.alignTextVerticallyInContainer()
         canada.alignTextVerticallyInContainer()
         whatsapp.alignTextVerticallyInContainer()
-        //skype.alignTextVerticallyInContainer()
+    }
+    
+    //TODO: Test what happens when skype is installed
+    @IBAction func goToSkype() {
+        let application = UIApplication.shared
+        let path = "skype://"
+        let appURL = URL(string: path)!
+        let websiteURL = URL(string: "https://itunes.apple.com/in/app/skype/id304878510?mt=8")!
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL, options: [:], completionHandler: nil)
+        } else {
+            application.open(websiteURL)
+        }
     }
    
 
