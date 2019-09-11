@@ -53,5 +53,26 @@
 	<array>
 		<string>skype</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>aspprime.flashmediacast.com:1935/aspprime/livestream/</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+			<key>kbjb.flashmediacast.com:1935/KBJB/livestream/</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+            <key>devimages-cdn.apple.com</key>
+            <dict>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

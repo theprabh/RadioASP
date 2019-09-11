@@ -89,31 +89,83 @@
             </objects>
             <point key="canvasLocation" x="1109" y="-97"/>
         </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="2Vw-bS-fcP">
-            <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="YjB-gv-f09" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hps-uy-g5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2857" y="-97"/>
-        </scene>
         <!--TV-->
         <scene sceneID="98i-v4-Ja5">
             <objects>
-                <tableViewController id="Vdw-EB-bxF" sceneMemberID="viewController">
+                <tableViewController id="Vdw-EB-bxF" customClass="TVTableViewController" customModule="RadioASP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="epr-kt-QzI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="ASP TV" id="cFl-Qm-IOb">
+                            <tableViewSection headerTitle="ASP Prime" id="cFl-Qm-IOb">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xpy-rZ-pNW">
-                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="xpy-rZ-pNW">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xpy-rZ-pNW" id="1wh-Du-eTC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e8-75-TgR">
+                                                    <rect key="frame" x="10" y="44.666666666666664" width="36" height="34.999999999999993"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <state key="normal" title="Play"/>
+                                                    <connections>
+                                                        <action selector="playVideo:" destination="Vdw-EB-bxF" eventType="touchUpInside" id="waQ-HU-sDl"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This station plays..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcT-dZ-182">
+                                                    <rect key="frame" x="10" y="9.9999999999999982" width="147" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UcT-dZ-182" firstAttribute="leading" secondItem="1wh-Du-eTC" secondAttribute="leading" constant="10" id="3RZ-vb-JcW"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UcT-dZ-182" secondAttribute="trailing" constant="20" symbolic="YES" id="FPv-xa-njI"/>
+                                                <constraint firstItem="UcT-dZ-182" firstAttribute="top" secondItem="1wh-Du-eTC" secondAttribute="top" constant="10" id="Xzu-fw-1aD"/>
+                                                <constraint firstAttribute="bottom" secondItem="2e8-75-TgR" secondAttribute="bottom" id="fJo-PR-XbL"/>
+                                                <constraint firstItem="2e8-75-TgR" firstAttribute="leading" secondItem="1wh-Du-eTC" secondAttribute="leading" constant="10" id="gDX-4B-3Fe"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2e8-75-TgR" secondAttribute="trailing" constant="20" symbolic="YES" id="mtf-kp-hj8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="ASP Gurbani" id="RIS-0v-av3">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="pRT-Wr-0dV">
+                                        <rect key="frame" x="0.0" y="191.33333333333334" width="375" height="80.000000000000028"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pRT-Wr-0dV" id="DA5-hf-i6y">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npr-12-NWv">
+                                                    <rect key="frame" x="10" y="44.666666666666664" width="41" height="34.999999999999993"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <state key="normal" title="Play "/>
+                                                    <connections>
+                                                        <action selector="playVideo:" destination="Vdw-EB-bxF" eventType="touchUpInside" id="3qj-Tb-ts5"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This station plays..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVI-Mm-XIa">
+                                                    <rect key="frame" x="10" y="10" width="147" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UVI-Mm-XIa" secondAttribute="trailing" constant="20" symbolic="YES" id="63F-5D-2iK"/>
+                                                <constraint firstAttribute="bottom" secondItem="npr-12-NWv" secondAttribute="bottom" id="Quv-vl-oRW"/>
+                                                <constraint firstItem="npr-12-NWv" firstAttribute="leading" secondItem="DA5-hf-i6y" secondAttribute="leading" constant="10" id="cHz-dr-EiT"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="npr-12-NWv" secondAttribute="trailing" constant="20" symbolic="YES" id="cyO-wb-pc2"/>
+                                                <constraint firstItem="UVI-Mm-XIa" firstAttribute="leading" secondItem="DA5-hf-i6y" secondAttribute="leading" constant="10" id="fyW-mz-1Sb"/>
+                                                <constraint firstItem="UVI-Mm-XIa" firstAttribute="top" secondItem="DA5-hf-i6y" secondAttribute="top" constant="10" id="goN-lz-8ji"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -128,7 +180,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQq-PC-kMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="-97"/>
+            <point key="canvasLocation" x="2024.8" y="-97.536945812807886"/>
         </scene>
         <!--Donate Nav-->
         <scene sceneID="Ndj-IH-bpM">

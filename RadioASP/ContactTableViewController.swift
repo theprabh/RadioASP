@@ -34,10 +34,10 @@ class ContactTableViewController: UITableViewController {
         whatsapp.alignTextVerticallyInContainer()
     }
     
-    //TODO: Test what happens when skype is installed
+    
     @IBAction func goToSkype() {
         let application = UIApplication.shared
-        let path = "skype://"
+        let path = "skype:radioasp?call"
         let appURL = URL(string: path)!
         let websiteURL = URL(string: "https://itunes.apple.com/in/app/skype/id304878510?mt=8")!
         
@@ -111,12 +111,12 @@ class ContactTableViewController: UITableViewController {
 }
 
 
+// Aligns text in UITextView vertically
 extension UITextView {
-    
-    // Aligns text in UITextView vertically
     func alignTextVerticallyInContainer() {
         var topCorrect = (self.bounds.size.height - self.contentSize.height * self.zoomScale) / 2
         topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
         self.contentInset.top = topCorrect
     }
+    
 }
